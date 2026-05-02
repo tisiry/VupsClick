@@ -1,0 +1,6 @@
+{
+  "vupsclick.message.off": "§c[VupsClick] AutoClicker is now DISABLED",
+  "vupsclick.message.on": "§a[VupsClick] Enabled: §f%s §a(Delay: §f%s §aticks)",
+  "vupsclick.message.error": "§c[VupsClick] Key '%s' not found!",
+  "vupsclick.message.usage": "§6[VupsClick] Usage: /click <attack|use|custom|off>"
+}
