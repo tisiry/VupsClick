@@ -6,7 +6,8 @@ import net.minecraft.text.Text;
 public class langs {
     // Исправленный метод проверки языка
     public static boolean isRussian() {
-        String lang = MinecraftClient.getInstance().getLanguageManager().getLanguage().getCode();
+        // В новых версиях достаточно просто проверить текущую строку языка
+        String lang = MinecraftClient.getInstance().getLanguageManager().getLanguage();
         return lang.equals("ru_ru");
     }
 
