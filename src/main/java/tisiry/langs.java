@@ -3,10 +3,9 @@ package tisiry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 
-public class langs {
-    // Исправленный метод проверки языка
     public static boolean isRussian() {
-        String lang = MinecraftClient.getInstance().getLanguageManager().getLanguage().getCode();
+
+        String lang = MinecraftClient.getInstance().getLanguageManager().getLanguage();
         return lang.equals("ru_ru");
     }
 
