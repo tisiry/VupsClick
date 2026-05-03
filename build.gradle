@@ -1,16 +1,16 @@
 plugins {
-    id 'fabric-loom' version '1.1-SNAPSHOT'
+    id 'fabric-loom' version '1.4-SNAPSHOT'
 }
 
-version = "1.19.4"
+version = "1.20.2"
 group = "tisiry"
 
 dependencies {
-    minecraft "com.mojang:minecraft:1.19.4"
+    minecraft "com.mojang:minecraft:1.20.2"
 
-    mappings "net.fabricmc:yarn:1.19.4+build.2:v2"
+    mappings "net.fabricmc:yarn:1.20.2+build.4:v2"
 
-    modImplementation "net.fabricmc:fabric-loader:0.14.21"
+    modImplementation "net.fabricmc:fabric-loader:0.15.11"
 
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.87.0+1.19.4"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.91.6+1.20.2"
 }
