@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "vupsclick",
+  "version": "1.0.0",
+  "name": "VupsClick",
+  "description": "\nAutoclicker calculates time in ticks per second (20 ticks)\n/click attack (time)\n/click use (time)\n/click off (time)\n/click custom (name of what needs to be bound) (time)",
+
+
+  "authors": [ "tisiry" ],
+  "contact": {
+    "sources": "https://github.com/tisiry/VupsClick.git"
+  },
+
+  "license": "MIT",
+  "icon": "assets/vupsclick/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "tisiry.click"
+    ]
+  },
+
+  "mixins": [
+    "vupsclick.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~26.1",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
+
+

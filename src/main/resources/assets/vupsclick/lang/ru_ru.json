@@ -1,0 +1,6 @@
+{
+  "vupsclick.message.off": "§c[VupsClick] Автокликер ВЫКЛЮЧЕН",
+  "vupsclick.message.on": "§a[VupsClick] ЗАПУЩЕН: §f%s §a(Пауза: §f%s §atиков)",
+  "vupsclick.message.error": "§c[VupsClick] Клавиша '%s' не найдена!",
+  "vupsclick.message.usage": "§6[VupsClick] Инфо: /click <attack|use|custom|off>"
+}

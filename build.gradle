@@ -1,0 +1,57 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.16.1' // Твоя версия из лога
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+    // Add repositories to retrieve artifacts from in here.
+    // You should only use this when depending on other mods because
+    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
+    // for more information about repositories.
+}
+dependencies {
+    minecraft "com.mojang:minecraft:26.1"
+    implementation "net.fabricmc:fabric-loader:0.18.4"
+    implementation "net.fabricmc.fabric-api:fabric-api:0.145.1+26.1"
+}
+
+
+
+processResources {
+    def version = project.version
+    inputs.property "version", version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+jar {
+    def projectName = project.name
+    inputs.property "projectName", projectName
+
+    from("LICENSE") {
+        rename { "${it}_$projectName"}
+    }
+}
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+    }
+}
